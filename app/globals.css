@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-bg: #FAFAFA;
+  --color-text: #1C1C1C;
+  --color-primary: #3F51B5;
+  --color-secondary: #F50057;
+  --color-surface: #FFFFFF;
+  --color-border: #E5E7EB;
+
+  --font-heading: var(--font-poppins);
+  --font-body: var(--font-inter);
+}
+
+.dark {
+  --color-bg: #1E1E1E;
+  --color-text: #E0E0E0;
+  --color-primary: #82B1FF;
+  --color-secondary: #FF4081;
+  --color-surface: #2C2C2C;
+  --color-border: #374151;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-text: var(--color-text);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.prose {
+  color: var(--color-text);
+}
+
+.prose h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.75rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-border);
+  font-style: italic;
+  color: var(--color-text) !important;
+  opacity: 0.8;
+}

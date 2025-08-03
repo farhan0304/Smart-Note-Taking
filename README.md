@@ -64,7 +64,7 @@ To run this project locally, follow these steps:
 #### **1. Clone the Repository**
 
 ```bash
-git clone [https://github.com/your-username/notewise-app.git](https://github.com/your-username/notewise-app.git)
+git clone https://github.com/farhan0304/Smart-Note-Taking.git
 cd notewise-app 
 ```
 
